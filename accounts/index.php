@@ -127,6 +127,12 @@ switch ($action) {
         // Store the array into the session
         $_SESSION['clientData'] = $clientData;
 
+        if (isset($_SESSION['page-tracker'])) {
+            $redirect = $_SESSION['page-tracker'];
+            header("location: $redirect");
+            exit;
+        }
+
         // load reviews by loggedin client
         $clientReviews = getReviewsByClientId($_SESSION['clientData']['clientId']);
         $clientReviewsHtml = displayClientReviews($clientReviews);

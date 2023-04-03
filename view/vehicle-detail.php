@@ -40,7 +40,6 @@ if ( isset($_SESSION['loggedin'])) {
             <div class="details">
                 <?php if (isset($vehicleDetailsDisplay)) {
                     echo $vehicleDetailsDisplay;
-                    // var_dump($vehicle);
                 } ?>
                 <?php if (isset($thumbnails)) {
                     echo $thumbnails;

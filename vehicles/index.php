@@ -2,6 +2,16 @@
 // Create or access a Session
 session_start();
 
+// This code keeps track of the users current page.
+// This allows us to easily direct user to the page they were 
+// viewing incase they decide to login.
+// An example is when the user is on the vehicle details veiw.
+// If he wants to write the review, the user will have to login to do so.
+// to make sure the user is taken back to that review page after loggin in,
+// this code comes into to allow that happen.
+$_SESSION['page-tracker'] = $_SERVER['REQUEST_URI'];
+
+
 // This is the vehicles controller
 
 // Get the database connection file
@@ -66,7 +76,6 @@ switch ($action) {
             include '../view/add_classification.php';
         }
         break;
-
 
     case 'add_vehicle':
         include '../view/add_vehicle.php';
