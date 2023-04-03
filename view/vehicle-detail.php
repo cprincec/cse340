@@ -33,9 +33,6 @@ if ( isset($_SESSION['loggedin'])) {
             <?php if (isset($message)) {
                 echo $message;
             }
-            if (isset($_SESSION['message'])) {
-                echo $_SESSION['message'];
-            }
             ?>
             <div class="details">
                 <?php if (isset($vehicleDetailsDisplay)) {
@@ -46,10 +43,13 @@ if ( isset($_SESSION['loggedin'])) {
                 } ?>
             </div>
             <hr>
-            <div class="reviews">
+            <div id="reviews" class="reviews">
                 <h3>Customer Reviews</h3>
                 
                 <?php if (isset($_SESSION['loggedin'])) {
+                    if (isset($_SESSION['message'])) {
+                        echo $_SESSION['message'];
+                    }
                     echo "<h4>Review the " . $vehicle['invMake'] . ' ' . $vehicle['invModel'] . "</h4>";
                     echo "<label for='screen-name'>Screen Name:</label>
                     <input name='screen-name' id='screen-name' value='$clientFirstname[0]$clientLastname' disabled>";

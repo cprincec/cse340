@@ -94,7 +94,7 @@ switch ($action) {
         } else {
             $reviewsHTML = "<p class='notice'>Be the first to write a review</p>";
         }
-        header("location: /phpmotors/vehicles/?action=vehicleDetails&invId=$invId");
+        header("location: /phpmotors/vehicles/?action=vehicleDetails&invId=$invId#reviews");
         break;
 
     case 'edit-review':
