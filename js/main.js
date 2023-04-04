@@ -26,3 +26,16 @@ if (document.querySelectorAll(".thumbnail > img")) {
 }
 
 
+// const li = document.querySelectorAll('nav li');
+
+// li.forEach(element => {
+//     element.addEventListener('mouseover', (e)=> {
+//         e.target.style.borderTop = "5px solid red";
+//         e.target.style.borderBottom = "5px solid red";
+//     })
+// });
+
+
+
+
+

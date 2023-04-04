@@ -42,7 +42,7 @@ if (!$_SESSION['loggedin']) {
                         <label for="update-review">Review Text:</label>
                         <textarea name="update-review" id="update-review" cols="30" rows="5" required><?php echo $_SESSION['aClientReview'][0]['reviewText'] ?></textarea>
                     </div>
-                    <button type='submit'>Add review</button>
+                    <button type='submit'>Update Review</button>
                         <input type='hidden' name='action' value='submit-edit-review'>
                         <input type='hidden' name='reviewId' value='<?php 
                         echo $reviewId;
